@@ -69,13 +69,13 @@ pipeline {
     
              stage('IMAGE SCANNING') {
             steps {
-                sh "trivy image --format table -o trivy-image-report.html adijaiswal/boardshack:latest "
+                sh "trivy image --format table -o trivy-image-report.html vm2322/gaming:latest "
             }
         }   
             
         stage('DOCKER DEPLOYMENT') {
             steps {
-                sh "docker run -d -p 8090:8080 VM2322/gaming:latest"
+                sh "docker run -d -p 8090:8080 vm2322/gaming:latest"
             }
         }   
     }
