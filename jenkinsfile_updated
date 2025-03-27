@@ -57,7 +57,7 @@ pipeline {
             }
         }
         
-       stage('BUILD & TAG DOCKER IMAGE') {
+       stage('BUILD & TAG DOCKER IMAGES') {
             steps {
                script {
                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
