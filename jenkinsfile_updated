@@ -16,13 +16,13 @@ pipeline {
             }
         }
     
-    stage('MAVEN COMPILED') {
+    stage('MAVEN COMPILE') {
             steps {
                 sh "mvn compile"
             }
         }
         
-        stage('MAVEN BUILD TEST') {
+        stage('MAVEN TEST') {
             steps {
                 sh "mvn test"
             }
